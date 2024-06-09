@@ -201,7 +201,14 @@ func (c Converter) convertNote(note ObsidianNote) ([]byte, error) {
 			return title
 		}
 
-		return fmt.Sprintf("[%s](/%s/%s)", title, c.SubPath, target)
+    // SH
+    // If SubPath is empty, don't add a leading /, because then it'll lead to 
+    // links with two leading slashes.
+    if c.SubPath == "" {
+      return fmt.Sprintf("[%s](%s/%s)", title, c.SubPath, target)
+    } else {
+      return fmt.Sprintf("[%s](/%s/%s)", title, c.SubPath, target)
+    }
 	})
 	buf.WriteString(content)
 
