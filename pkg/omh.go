@@ -127,6 +127,14 @@ func (c Converter) processNotes(obsidianDir ObsidianDirectory, hugoDir string) e
 		}
 
 		hugoPath := filepath.Join(hugoDir, c.ConvertName(note.Title)) + ".md"
+
+    // Leave _index files unchanged (as opposet to renaming to -index)
+    if note.Title=="_index" {
+      hugoPath = filepath.Join(hugoDir, note.Title) + ".md"
+      log.Warn("Leaving ", hugoPath, " as-is.")
+    }
+
+
 		err = ioutil.WriteFile(hugoPath, hugoContent, 0644)
 		if err != nil {
 			return fmt.Errorf("failed to write %s: %w", hugoPath, err)
