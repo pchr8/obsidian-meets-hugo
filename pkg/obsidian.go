@@ -45,11 +45,11 @@ func (note ObsidianNote) HugoFrontMatter(added map[string]interface{}) map[strin
   // otherwise use Obsidian filename for this (standard behaviour). 
   oldTitle := hugo["title"]
   if oldTitle==nil {
-    log.Warn("No title in front-matter, using filename in ", note.Title)
+    log.Info("No title in front-matter, using filename in ", note.Title)
     // must have title
     hugo["title"] = note.Title
   } else {
-    log.Warn("Using frontmatter title for ", oldTitle)
+    log.Info("Using frontmatter title for ", oldTitle)
   }
 
 	// if date exists, use that
