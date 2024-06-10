@@ -1,3 +1,15 @@
+# This fork 
+In this fork I fix things I need for my own website, <https://serhii.net>, posts for which are also written in Obsidian. 
+Specifically, this fixes:
+- Use Obsidian file front-matter title if present (instead of the filename)
+- Allow writing directly to site root with empty `--sub-path= ` by fixing double-leading-slash assets-linking bug 
+- Cyrillc now allowed in filenames 
+- Leave `_index.md` as-is without renaming them to `-index.md` — that way these files can be created directly in Obsidian instead of manually in Hugo
+
+This is literally my first 2h coding something in Go with which I'm _completely_ unfamiliar, so YMMV and be careful :) 
+
+- - -
+
 [![codecov](https://codecov.io/gh/ukautz/obsidian-meets-hugo/branch/main/graph/badge.svg?token=89QLLNR10S)](https://codecov.io/gh/ukautz/obsidian-meets-hugo)
 
 # `omh` - Obsidian Meets Hugo
