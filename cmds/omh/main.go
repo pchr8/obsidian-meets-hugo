@@ -9,7 +9,7 @@ import (
 	"github.com/iancoleman/strcase"
 	log "github.com/sirupsen/logrus"
 	"github.com/thlib/go-timezone-local/tzlocal"
-	omh "github.com/ukautz/obsidian-meets-hugo/pkg"
+	omh "github.com/pchr8/obsidian-meets-hugo/pkg"
 	"github.com/urfave/cli/v2"
 )
 
