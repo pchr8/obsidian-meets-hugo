@@ -12,6 +12,12 @@ This is literally my first 2h coding something in Go with which I'm _completely_
 
 [![codecov](https://codecov.io/gh/ukautz/obsidian-meets-hugo/branch/main/graph/badge.svg?token=89QLLNR10S)](https://codecov.io/gh/ukautz/obsidian-meets-hugo)
 
+## Installing
+`go build cmds/omh/main.go` creates a `main` executable in current dir.
+
+The rest of this README may or may not apply to this fork.
+
+
 # `omh` - Obsidian Meets Hugo
 
 Command line tool to marry [Obsidian](https://obsidian.md/) vaults to [Hugo](https://gohugo.io/) published websites.
