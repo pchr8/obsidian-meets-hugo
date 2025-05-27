@@ -1,4 +1,4 @@
-module github.com/ukautz/obsidian-meets-hugo
+module github.com/pchr8/obsidian-meets-hugo
 
 go 1.17
 
